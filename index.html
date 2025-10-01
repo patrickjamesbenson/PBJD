@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Patrick Benson — Complete Job Description (Interactive, v4)</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --panel:#f8fafc;
+    --muted:#6b7280;
+    --ink:#111827;
+    --ring:#e5e7eb;
+    --blue:#2563eb;
+    --blue-50:#eff6ff;
+    --purple:#7c3aed;
+    --purple-50:#f5f3ff;
+    --green:#16a34a;
+    --green-50:#ecfdf5;
+    --yellow:#ca8a04;
+    --yellow-50:#fef9c3;
+    --red:#dc2626;
+    --orange:#ea580c;
+    --orange-50:#fff7ed;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans","Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji"}
+  .container{max-width:1150px;margin:0 auto;padding:24px}
+  h1{font-size:36px;line-height:1.2;margin:0 0 4px;font-weight:800}
+  h2{margin:0 0 8px;font-size:28px}
+  h3{margin:0 0 8px;font-size:20px}
+  .muted{color:var(--muted)}
+  .card{background:#fff;border:1px solid var(--ring);border-radius:12px;box-shadow:0 1px 1px rgba(0,0,0,.02)}
+  .panel{background:var(--panel);border:1px solid var(--ring);border-radius:12px}
+  .row{display:grid;gap:16px}
+  .row.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .badge{display:inline-block;border-radius:999px;padding:4px 10px;font-weight:600;font-size:13px;background:#111827;color:white}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:10px;border:1px solid transparent;padding:12px 16px;font-weight:700;cursor:pointer;transition:.15s;background:#111827;color:#fff}
+  .btn:hover{filter:brightness(.95)}
+  .btn.blue{background:var(--blue)}
+  .btn.outline{background:#fff;border-color:var(--ring);color:#111827}
+  .role-switch{display:grid;gap:16px;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .role-btn{padding:20px;border-radius:12px;border:1px solid var(--ring);background:#f3f4f6;font-weight:800;font-size:18px;cursor:pointer;transition:.18s}
+  .role-btn:hover{background:#e5e7eb}
+  .role-btn.active{transform:translateY(-1px) scale(1.02);color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+  .role-btn.blue{background:var(--blue);border-color:var(--blue)}
+  .role-btn.purple{background:var(--purple);border-color:var(--purple)}
+  .role-btn.green{background:var(--green);border-color:var(--green)}
+  .role-btn.orange{background:var(--orange);border-color:var(--orange)}
+  .tabbar{display:flex;gap:8px;overflow:auto;border-bottom:2px solid var(--ring);margin:16px 0 8px}
+  .tab{padding:12px 18px;font-weight:700;border:0;background:transparent;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:4px solid transparent}
+  .tab.active{color:var(--ink)}
+  .tab.blue.active{border-color:var(--blue);color:var(--blue)}
+  .tab.purple.active{border-color:var(--purple);color:var(--purple)}
+  .tab.green.active{border-color:var(--green);color:var(--green)}
+  .tab.orange.active{border-color:var(--orange);color:var(--orange)}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--ring);border-radius:10px;padding:12px 14px}
+  .seg{background:#fff;border:1px solid var(--ring);border-radius:12px;padding:14px}
+  .seg h4{margin:0 0 6px}
+  .grid{display:grid;gap:16px}
+  .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+  table{width:100%;border-collapse:collapse}
+  th,td{border:1px solid var(--ring);padding:10px;text-align:left}
+  thead tr{background:#f3f4f6}
+  .note{background:var(--yellow-50);border-left:4px solid var(--yellow);padding:12px;border-radius:8px}
+  .callout{border:2px solid var(--ring);border-radius:12px;padding:16px;background:#fff}
+  .callout.emph{border-color:var(--blue)}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+  .roleColor-blue{--accent:var(--blue);--accent50:var(--blue-50)}
+  .roleColor-purple{--accent:var(--purple);--accent50:var(--purple-50)}
+  .roleColor-green{--accent:var(--green);--accent50:var(--green-50)}
+  .roleColor-orange{--accent:var(--orange);--accent50:var(--orange-50)}
+  .accentBG{background:var(--accent50)}
+  .accentText{color:var(--accent)}
+  .accentBorder{border-color:var(--accent)}
+  .shadow{box-shadow:0 2px 14px rgba(0,0,0,.05)}
+  .mb-2{margin-bottom:8px}.mb-3{margin-bottom:12px}.mb-4{margin-bottom:16px}.mb-6{margin-bottom:24px}
+  .mt-2{margin-top:8px}.mt-3{margin-top:12px}.mt-4{margin-top:16px}.mt-6{margin-top:24px}
+  .p-3{padding:12px}.p-4{padding:16px}.p-5{padding:20px}.p-6{padding:24px}
+  .rounded{border-radius:12px}
+  .center{text-align:center}
+  .small{font-size:13px}
+  .icon{width:28px;height:28px;display:inline-block;vertical-align:middle}
+  .icon svg{width:100%;height:100%}
+  .mutelist{color:#374151}
+  .mutelist li{display:flex;gap:8px}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="mb-6">
+    <h1>Complete Job Description — 4 Roles in a Progression</h1>
+    <div class="panel p-4 grid two">
+      <div><strong>Name:</strong> <span id="person"></span></div>
+      <div>
+        <strong>Reports To:</strong> <span id="reportsTo"></span>
+        <div class="small muted" id="preparedFor" style="margin-top:2px"></div>
+      </div>
+      <div style="grid-column:1/-1"><strong>Territory:</strong> <span id="location"></span></div>
+    </div>
+    <div class="row two mt-3" style="gap:12px">
+      <button class="btn outline" id="csvBtn">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+        </span>
+        Download as CSV (for Streamlit)
+      </button>
+    </div>
+  </header>
+
+  <div class="role-switch mb-6" id="roleSwitch"></div>
+
+  <nav class="tabbar" id="tabbar"></nav>
+
+  <main id="content"></main>
+</div>
+
+<script>
+const roleData = {
+  person: "Patrick Benson",
+  reportsTo: "Vincent Galimi & Carlo Cesta",
+  location: "New South Wales (Primary) + National Support",
+  preparedFor: "Prepared for Jordyn Vella (HR)"
+};
+
+const bdmRole = {
+  title: "Business Development Manager (BDM) / Sales Representative — NSW",
+  department: "Sales",
+  responsibilities:[
+    {category:"Sales & Business Development", items:[
+      "New South Wales regional sales coverage",
+      "Client relationship management across engineer and consultant segments",
+      "End-user engagement with electrical contractors",
+      "Tendering and software solution presentations",
+      "Lead generation and pipeline development",
+      "Marketing qualified lead (MQL) conversion",
+      "Quote preparation and proposal development",
+      "Order conversion and deal closure",
+      "Project stage tracking (construction to installation)"
+    ]},
+    {category:"Market Intelligence & Strategy", items:[
+      "Market and marketing feedback collection and analysis",
+      "Business case presentation for new products",
+      "Business case presentation for new projects",
+      "Competitive intelligence gathering",
+      "Customer insights and trends reporting"
+    ]},
+    {category:"Client Management", items:[
+      "Engineers and consultants relationship building",
+      "Electrical contractor engagement and support",
+      "Client needs assessment and solution mapping",
+      "Post-sale relationship maintenance"
+    ]},
+    {category:"Reporting & Administration", items:[
+      "CRM data management and updates",
+      "Sales pipeline reporting to management",
+      "KPI tracking and performance documentation",
+      "Tender tracking and management"
+    ]}
+  ],
+  kpis:[
+    {metric:"Lead Generation", target:"10 per month", measure:"Quantity of qualified leads entered into pipeline"},
+    {metric:"Marketing Qualified Leads (MQL)", target:"8 per month", measure:"Number of leads that meet qualification criteria"},
+    {metric:"Lead to Quote Conversion", target:"5 per month", measure:"Number of MQLs converted to formal quotes"},
+    {metric:"Quote to Order Conversion", target:"3 per month", measure:"Number of quotes converted to confirmed orders"},
+    {metric:"Sales Revenue", target:"$2,000,000 annually (ex GST)", measure:"Ramp to 50% by month 6; 100% by month 12"},
+    {metric:"Gross Margin (GM)", target:"13% margin target", measure:"Contribution margin on sales"},
+    {metric:"Project Stage Tracking", target:"Via HubSpot", measure:"Visibility from tender to installation"},
+    {metric:"Client Engagement", target:"10 per week", measure:"Meaningful client interactions (incl. virtual)"}
+  ],
+  compensation:{
+    baseSalary:140000,
+    allowance:20000,
+    superRate:0.12,
+    commissionRate:0.13,
+    commissionBasis:"Gross Margin",
+    salesTarget:2000000,
+    factoryCost:110,
+    salePrice:250,
+    notes:[
+      "Superannuation is calculated on base salary only (no super on car allowance).",
+      "Commission: 13% of Gross Margin (GM).",
+      "GM per metre example: $250 sale − $110 cost = $140 (56.0%).",
+      "At $2M sales: GM ≈ $1.12M → commission ≈ $145,600."
+    ]
+  }
+};
+
+const corestackRole = {
+  title:"CoreStack Implementation — Foundation (Not Optional)",
+  department:"Technology / Operations Transformation",
+  responsibilities:[
+    {category:"NATA-Calibrated Photometry System", items:[
+      "Develop NATA laboratory-recognised testing equipment baseline",
+      "Create Australian standard test rig calibrated to NATA standards",
+      "Achieve near 100% photometry accuracy for virtual product development",
+      "Enable go-to-market with virtual products before physical manufacture",
+      "Implement photometry scaling across lumen densities, chips, colour temps, currents"
+    ]},
+    {category:"CoreStack Workflow Automation", items:[
+      "Build unique IES generation (not static repository)",
+      "Implement JSON-based progressive data flow through departments",
+      "Create single source of truth from engineering to manufacturing",
+      "Automate documents: data sheets, polar curves, as-builts, sign-offs",
+      "Reduce planning time from hours to minutes",
+      "Instant change management with differential calculations"
+    ]},
+    {category:"Online Specification Engine (Phase 1 Priority)", items:[
+      "Customer-facing online selection tools",
+      "Custom lumen output and colour temperature selection",
+      "Email capture → automatic CRM lead generation",
+      "Rep assignment (round-robin or territory)",
+      "Auto-quote generation from online selections",
+      "Tiered offerings: Economy / Business / First Class / Bespoke"
+    ]},
+    {category:"Manufacturing Integration", items:[
+      "Automate cut-sheets, run sheets, time-motion",
+      "Real-time component requirements",
+      "On-the-spot change quotes with differentials",
+      "100% confident build instructions from validated database",
+      "Integrate factory systems with CoreStack workflow"
+    ]},
+    {category:"People & Change", items:[
+      "Zero redundancies — automation elevates roles",
+      "Training & adoption across teams",
+      "Document all processes and SOPs"
+    ]}
+  ],
+  kpis:[
+    {metric:"Time Reduction", target:"Hours → minutes", measure:"Measured planning/quoting time"},
+    {metric:"Photometry Accuracy", target:"Near 100%", measure:"Virtual vs physical builds"},
+    {metric:"User Adoption", target:"TBD %", measure:"Staff using CoreStack vs. manual"},
+    {metric:"Lead Capture", target:"TBD / month", measure:"From online spec → CRM"},
+    {metric:"Revenue Impact", target:"YoY growth", measure:"Extrusions revenue vs. baseline"}
+  ],
+  valueFramework:{
+    target:"~$100k tied to delivering a greater value",
+    categories:[
+      "Planning time reduction (hours → minutes per job)",
+      "Error elimination (rework tracked & reduced)",
+      "Material optimisation (waste/offcut reuse)",
+      "Revenue acceleration (confidence, upsell, win-rate)",
+      "Reputation & confidence across the chain"
+    ],
+    principle:"Company tracks & validates metrics; compensation tied to measurable outcomes they define."
+  },
+  phases:{
+    phase1:[
+      "Internal workflow automation - quoting, design packs++",
+      "NATA-calibrated photometry baseline",
+      "Automated manufacturing documentation",
+      "Online specification engine (market differentiator)",
+      "Change management automation",
+      "CRM integration and lead generation"
+    ],
+    phase2:[
+      "3D takeoff with DXF/SketchUp integration",
+      "Lighting design services upsell",
+      "Controls integration (Xeno/Dynalight)",
+      "NFC programming capabilities (Novolux)",
+      "Emergency lighting partnerships (Evolt/DALI-2)"
+    ]
+  }
+};
+
+const categoryRole = {
+  title: "Category Manager — National (added at 6-month review)",
+  department: "Product Management / Strategy",
+  responsibilities:[
+    {category:"Business Case Management", items:[
+      "Collect business cases from sales reps nationally",
+      "Distill and consolidate cases for management review",
+      "Present consolidated cases to management for approval",
+      "Track outcomes and implementation",
+      "Prioritise opportunities based on strategic value"
+    ]},
+    {category:"Opportunity Pipeline Management", items:[
+      "Ideas Funnel for direct & bespoke opportunities",
+      "Product Design Attributes for improvements",
+      "Roadmap / Marketing / Website / Engineering lanes",
+      "Coordinated launches across functions",
+      "Monitor upcoming projects across territories"
+    ]},
+    {category:"National Sales Support", items:[
+      "Support Brisbane and Melbourne reps",
+      "Interstate travel 4 days/month as needed",
+      "Fortnightly virtual meetings",
+      "Share best practices and market intel nationally",
+      "Single point of contact filtering ideas to management"
+    ]},
+    {category:"Engineering Alignment", items:[
+      "Ensure category alignment with engineering roadmap",
+      "Feasibility checks for proposed changes",
+      "Implementation tracking"
+    ]}
+  ],
+  kpis:[
+    {metric:"Business Cases Submitted", target:"4 per quarter", measure:"Quality cases presented"},
+    {metric:"Approval Rate", target:"50%", measure:"Submitted vs. approved"},
+    {metric:"Idea Funnel Volume", target:"4 / month", measure:"Opportunities captured"},
+    {metric:"Implementation", target:"50%", measure:"Approved → delivered"},
+    {metric:"National Support", target:"4 days/month + fortnightly calls", measure:"Support cadence"},
+    {metric:"Budget", target:"$3M (incl. own $2M + $1M national)", measure:"Adherence & outcomes"}
+  ],
+  compensation:{
+    baseIncrease:40000, carAllowanceIncrease:2500, superRate:0.12
+  }
+};
+
+const internationalRole = {
+  title:"International Category Manager — Stretch Target (added at 12-month review)",
+  department:"Growth / International",
+  responsibilities:[
+    {category:"Go-to-Market", items:[
+      "Pilot markets selection & launch plans",
+      "Distributor onboarding & enablement",
+      "Spec-grade positioning with CoreStack demos"
+    ]},
+    {category:"Commercials", items:[
+      "Target distributor margin range 2–5% (guidance)",
+      "Volume, service levels, QA standards",
+      "Explore local assembly options where viable"
+    ]},
+    {category:"Enablement", items:[
+      "Playbooks & training based on AU success",
+      "Centralised photometry & JSON workflows",
+      "Global documentation & asset reuse"
+    ]}
+  ],
+  kpis:[
+    {metric:"Market Launches", target:"TBD", measure:"Countries opened with active pipeline"},
+    {metric:"Revenue", target:"TBD", measure:"International revenue added"},
+    {metric:"Partner Quality", target:"TBD", measure:"SLA adherence & win-rate"},
+    {metric:"Time to First Win", target:"TBD", measure:"Onboarding → revenue"}
+  ],
+  compensation:{
+    baseIncrease:20000, carAllowanceIncrease:"TBD", superRate:0.12
+  }
+};
+
+const equipment = [
+  { item: "Mobile Phone (BYO)", purpose: "Client communication, field work", status: "Required", cost: "$90/month allowance", roles: "All" },
+  { item: "Laptop/Computer", purpose: "Surface Pro or equivalent", status: "Required", cost: "At cost", roles: "All" },
+  { item: "Office Setup", purpose: "2x UHD wide monitors, trackball, docking station", status: "Required", cost: "~$1,000", roles: "All" },
+  { item: "Tendering Software", purpose: "Proposal and tender management (12 month subscription)", status: "Required", cost: "At cost", roles: "BDM" },
+  { item: "HubSpot", purpose: "CRM and project management", status: "Required", cost: "Subscription at cost", roles: "All" },
+  { item: "SketchUp", purpose: "3D takeoff and lighting design (Phase 2)", status: "Required", cost: "Licence subscription at cost", roles: "CoreStack / International" },
+  { item: "DIALux", purpose: "Lighting design software", status: "Required", cost: "At cost", roles: "BDM/CoreStack" },
+  { item: "Excess Vehicle Use", purpose: "Outside Sydney Metro only", status: "Required", cost: "Fuel at cost (expensed)", roles: "BDM/Category" },
+  { item: "General Expense Account", purpose: "Parking, tolls, entertainment, client coffees, meals", status: "Required", cost: "Up to $500/month", roles: "All" },
+  { item: "Travel Budget", purpose: "Interstate support", status: "Required", cost: "At cost", roles: "Category" },
+  { item: "International Travel", purpose: "Pilot market visits", status: "Stretch", cost: "TBD by plan", roles: "International" },
+  { item: "Photometry Testing Equipment", purpose: "NATA-calibrated baseline development", status: "Project-related", cost: "At cost (separate project)", roles: "CoreStack" },
+  { item: "GitHub Subscription", purpose: "Project development version control", status: "Required", cost: "Subscription at cost", roles: "CoreStack/International" },
+];
+
+const roles = [
+  {id:"bdm", data:bdmRole, color:"blue", label:"Role 1A: BDM (NSW)", icon:"briefcase"},
+  {id:"corestack", data:corestackRole, color:"green", label:"Role 1B: CoreStack (Foundation)", icon:"rocket"},
+  {id:"category", data:categoryRole, color:"purple", label:"Role 2: Category Manager (6-mo)", icon:"layers"},
+  {id:"international", data:internationalRole, color:"orange", label:"Role 3: International (12-mo)", icon:"globe"}
+];
+
+let activeRole = "bdm";
+let activeTab = "overview";
+
+const $ = sel => document.querySelector(sel);
+function iconSVG(name){
+  if(name==="briefcase") return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 13h20"/></svg>';
+  if(name==="layers") return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>';
+  if(name==="rocket") return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4M19 5c-1.5 1.5-3.7 1.7-5 1-1.3-.7-2.6-2.1-3.3-3.4C9 1.4 9.2-.8 10.7-2.3M9 7l-7 7 7 2 2 7 7-7"/></svg>';
+  if(name==="globe") return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20"/><path d="M12 2a15.3 15.3 0 0 0 0 20"/></svg>';
+  return '';
+}
+function el(tag, cls, html){ const n = document.createElement(tag); if(cls) n.className = cls; if(html!=null) n.innerHTML = html; return n; }
+
+function setHeader(){
+  $("#person").textContent = roleData.person;
+  $("#reportsTo").textContent = roleData.reportsTo;
+  $("#location").textContent = roleData.location;
+  $("#preparedFor").textContent = roleData.preparedFor;
+}
+
+function renderRoleSwitch(){
+  const wrap = $("#roleSwitch");
+  wrap.innerHTML = "";
+  roles.forEach(r => {
+    const btn = document.createElement("button");
+    btn.className = "role-btn " + (activeRole===r.id ? `active ${r.color}` : "");
+    btn.innerHTML = `<div class="center">
+      <span class="icon" aria-hidden="true">${iconSVG(r.icon)}</span>
+      <div class="mt-2">${r.label}</div>
+    </div>`;
+    btn.onclick = () => { activeRole = r.id; activeTab = "overview"; renderAll(); };
+    wrap.appendChild(btn);
+  });
+}
+
+function tabList(){
+  const base = ["overview","responsibilities","kpis","compensation"];
+  if(activeRole==="corestack") base.push("phases");
+  base.push("equipment");
+  return base;
+}
+
+function renderTabs(){
+  const color = roles.find(r=>r.id===activeRole).color;
+  const nav = $("#tabbar");
+  nav.innerHTML = "";
+  tabList().forEach(t => {
+    const b = document.createElement("button");
+    b.className = `tab ${color} ${activeTab===t ? "active":""}`;
+    b.textContent = (t==="kpis" ? "KPIs" : t.charAt(0).toUpperCase()+t.slice(1));
+    b.onclick = () => { activeTab = t; renderContent(); renderTabs(); };
+    nav.appendChild(b);
+  });
+}
+
+function renderOverview(role){
+  const box = el("div", "card p-6 accentBG rounded shadow");
+  box.innerHTML = `<h2>${role.title}</h2>
+    <p class="small muted mb-3">Department: ${role.department}</p>`;
+
+  if(activeRole==="bdm"){
+    const p = el("p", null, `Responsible for NSW sales growth across engineers, consultants, and electrical contractors.
+    Combines tendering and hands-on sales execution with market intelligence feedback to inform strategy.`);
+    box.appendChild(p);
+    const grid = el("div", "grid three mt-4");
+    [["Engineers","Specification and design partners"],
+     ["Consultants","Project advisors and influencers"],
+     ["Electrical Contractors","End users and installers"]].forEach(([title,sub])=>{
+      const c = el("div","seg shadow");
+      c.innerHTML = `<h4 class="accentText">${title}</h4><div class="small muted">${sub}</div>`;
+      grid.appendChild(c);
+    });
+    box.appendChild(grid);
+  }
+
+  if(activeRole==="category"){
+    const p = el("p", null, `Central hub for national opportunity funnels and business cases. Coordinates Engineering,
+      Marketing and Website for aligned launches; supports interstate reps with regular cadence.`);
+    box.appendChild(p);
+  }
+
+  if(activeRole==="corestack"){
+    const note = el("div","note");
+    note.innerHTML = `<strong>Core principle:</strong> When automation replaces manual tasks, <u>create a new position</u> and elevate people — do not eliminate roles.`;
+    box.appendChild(note);
+  }
+
+  if(activeRole==="international"){
+    const p = el("p", null, `Elevate proven national traction to international markets via distributor networks and
+      lightweight, scalable operating models grounded in CoreStack.`);
+    box.appendChild(p);
+  }
+
+  return box;
+}
+
+function renderResponsibilities(role){
+  const wrap = el("div","grid");
+  role.responsibilities.forEach(cat => {
+    const c = el("div","panel p-4 rounded");
+    c.innerHTML = `<h3 class="accentText">${cat.category}</h3>`;
+    const ul = el("ul","mutelist");
+    cat.items.forEach(it => ul.innerHTML += `<li>• <span>${it}</span></li>`);
+    c.appendChild(ul);
+    wrap.appendChild(c);
+  });
+  return wrap;
+}
+
+function renderKPIs(role){
+  const box = el("div","grid");
+  const head = el("div","panel p-4 rounded");
+  head.innerHTML = `<strong class="accentText">Key Performance Indicators</strong>`;
+  box.appendChild(head);
+  const table = el("table","card rounded shadow");
+  table.innerHTML = `<thead><tr>
+    <th>KPI Metric</th><th>Target</th><th>Measurement</th>
+  </tr></thead><tbody></tbody>`;
+  role.kpis.forEach(k => {
+    const tr = el("tr");
+    tr.innerHTML = `<td class="accentText" style="font-weight:700">${k.metric}</td>
+      <td>${k.target}</td><td class="muted">${k.measure}</td>`;
+    table.querySelector("tbody").appendChild(tr);
+  });
+  box.appendChild(table);
+  return box;
+}
+
+function currency(n){ return "$" + n.toLocaleString(); }
+
+function renderComp(role){
+  const wrap = el("div","grid");
+  if(activeRole==="bdm"){
+    const b = role.compensation.baseSalary;
+    const allow = role.compensation.allowance;
+    const superAmt = Math.round(b * role.compensation.superRate);
+    const total = b + allow + superAmt;
+    const gmPerM = role.compensation.salePrice - role.compensation.factoryCost;
+    const gmPct = (gmPerM/role.compensation.salePrice*100).toFixed(1);
+    const gmAtTarget = Math.round(0.56 * role.compensation.salesTarget);
+    const commAtTarget = Math.round(gmAtTarget * role.compensation.commissionRate);
+    const fixed = el("div","card p-6 rounded shadow");
+    fixed.innerHTML = `<h3 class="accentText">Role 1A: Compensation</h3>
+    <div class="grid two mt-3">
+      <div class="seg shadow">
+        <h4 class="accentText">Fixed</h4>
+        <div class="small">
+          <div class="row two"><div>Base Salary</div><div><strong>${currency(b)}</strong></div></div>
+          <div class="row two"><div>Car/Allowance</div><div><strong>${currency(allow)}</strong> <span class="small muted">(no super)</span></div></div>
+          <div class="row two"><div>Super (12% on base)</div><div><strong>${currency(superAmt)}</strong></div></div>
+          <div class="row two" style="margin-top:6px"><div>Total Package</div><div class="accentText"><strong>${currency(total)}</strong></div></div>
+        </div>
+      </div>
+      <div class="seg shadow">
+        <h4 class="accentText">Variable</h4>
+        <div class="small">
+          <div class="row two"><div>Commission</div><div><strong>${(role.compensation.commissionRate*100).toFixed(0)}% of GM</strong></div></div>
+          <div class="row two"><div>GM / metre</div><div><strong>${currency(gmPerM)}</strong> (${gmPct}%)</div></div>
+          <div class="row two"><div>GM @ $2M sales</div><div><strong>${currency(gmAtTarget)}</strong></div></div>
+          <div class="row two"><div>Commission @ target</div><div class="accentText"><strong>${currency(commAtTarget)}</strong></div></div>
+        </div>
+      </div>
+    </div>`;
+    const notes = el("div","note mt-3 small");
+    notes.innerHTML = `<strong>Notes:</strong> ${role.compensation.notes.join(" ")} `;
+    fixed.appendChild(notes);
+    wrap.appendChild(fixed);
+  }
+  if(activeRole==="corestack"){
+    const blk = el("div","card p-6 rounded shadow");
+    blk.innerHTML = `<h3 class="accentText">Role 1B: Value-Based Compensation</h3>
+      <div class="small">No fixed dollars listed. Compensation is tied to agreed, company-tracked outcomes.</div>
+      <div class="panel p-3 rounded small mt-2"><strong>Target Package:</strong> ${corestackRole.valueFramework.target}</div>
+      <ul class="mutelist small mt-2">${corestackRole.valueFramework.categories.map(c=>`<li>• ${c}</li>`).join("")}</ul>
+      <div class="note mt-2 small"><strong>Principle:</strong> ${corestackRole.valueFramework.principle}</div>`;
+    wrap.appendChild(blk);
+  }
+  if(activeRole==="category"){
+    const s = categoryRole.compensation;
+    const superOnBase = Math.round(s.baseIncrease * s.superRate);
+    const totalAdditional = s.baseIncrease + s.carAllowanceIncrease + superOnBase;
+    const blk = el("div","card p-6 rounded shadow");
+    blk.innerHTML = `<h3 class="accentText">Role 2: Additional Compensation (on 6-month review)</h3>
+      <div class="grid two mt-2">
+        <div class="seg">
+          <div class="row two small"><div>Base Increase</div><div><strong>${currency(s.baseIncrease)}</strong></div></div>
+          <div class="row two small"><div>Car Allowance Increase</div><div><strong>${currency(s.carAllowanceIncrease)}</strong> <span class="small muted">(no super)</span></div></div>
+          <div class="row two small"><div>Super (12% on base)</div><div><strong>${currency(superOnBase)}</strong></div></div>
+        </div>
+        <div class="seg">
+          <div class="row two small"><div>Total Additional Package</div><div class="accentText"><strong>${currency(totalAdditional)}</strong></div></div>
+          <div class="small muted mt-2">Super is calculated only on the base increase, not on the car allowance.</div>
+        </div>
+      </div>`;
+    wrap.appendChild(blk);
+  }
+  if(activeRole==="international"){
+    const s = internationalRole.compensation;
+    const superOnBase = Math.round(s.baseIncrease * s.superRate);
+    const blk = el("div","card p-6 rounded shadow");
+    blk.innerHTML = `<h3 class="accentText">Role 3: Additional Compensation (on 12-month review)</h3>
+      <div class="seg">
+        <div class="row two small"><div>Base Increase</div><div><strong>${currency(s.baseIncrease)}</strong></div></div>
+        <div class="row two small"><div>Super (12% on base)</div><div><strong>${currency(superOnBase)}</strong></div></div>
+        <div class="row two small"><div>Car Allowance Increase</div><div><strong>${s.carAllowanceIncrease}</strong> <span class="small muted">(no super)</span></div></div>
+      </div>
+      <div class="note mt-2 small"><strong>Distributor margin guidance:</strong> 2–5% depending on model, to be validated during market pilots.</div>`;
+    wrap.appendChild(blk);
+  }
+  return wrap;
+}
+
+function renderPhases(role){
+  const wrap = el("div","grid");
+  const p1 = el("div","card p-6 rounded shadow");
+  p1.innerHTML = `<h3 class="accentText">Phase 1 (Priority)</h3>
+    <ul class="mutelist small">${role.phases.phase1.map(i=>`<li>• ${i}</li>`).join("")}</ul>`;
+  const p2 = el("div","card p-6 rounded shadow");
+  p2.innerHTML = `<h3 class="accentText">Phase 2 (Next)</h3>
+    <ul class="mutelist small">${role.phases.phase2.map(i=>`<li>• ${i}</li>`).join("")}</ul>`;
+  wrap.appendChild(p1); wrap.appendChild(p2);
+  return wrap;
+}
+
+function badgeFor(status){
+  let bg = "#d1fae5", color="#065f46";
+  if(status==="Required"){ bg = "#fee2e2"; color = "#991b1b"; }
+  if(status==="Project-related"){ bg = "#dbeafe"; color = "#1e40af"; }
+  if(status==="Stretch"){ bg = "#fef3c7"; color = "#92400e"; }
+  return `<span style="display:inline-block;padding:4px 10px;border-radius:999px;font-weight:700;background:${bg};color:${color}">${status}</span>`;
+}
+
+function renderEquipment(){
+  const wrap = el("div","grid");
+  const head = el("div","panel p-4 rounded");
+  head.innerHTML = `<strong class="accentText">Equipment & Expenses</strong><div class="small muted">Tools and budgets that support all roles.</div>`;
+  wrap.appendChild(head);
+  const table = el("table","card rounded shadow");
+  table.innerHTML = `<thead><tr>
+    <th>Item</th><th>Purpose</th><th>Cost</th><th>Status</th><th>Roles</th>
+  </tr></thead><tbody></tbody>`;
+  equipment.forEach(eq => {
+    const tr = el("tr");
+    tr.innerHTML = `<td class="accentText" style="font-weight:700">${eq.item}</td>
+      <td>${eq.purpose}</td><td><strong>${eq.cost}</strong></td>
+      <td>${badgeFor(eq.status)}</td><td class="muted">${eq.roles}</td>`;
+    table.querySelector("tbody").appendChild(tr);
+  });
+  wrap.appendChild(table);
+  return wrap;
+}
+
+function renderContent(){
+  const {id,color,data} = roles.find(r=>r.id===activeRole);
+  const content = $("#content");
+  content.className = "roleColor-"+color;
+  content.innerHTML = "";
+  if(activeTab==="overview") content.appendChild(renderOverview(data));
+  if(activeTab==="responsibilities") content.appendChild(renderResponsibilities(data));
+  if(activeTab==="kpis") content.appendChild(renderKPIs(data));
+  if(activeTab==="compensation") content.appendChild(renderComp(data));
+  if(activeTab==="phases" && activeRole==="corestack") content.appendChild(renderPhases(data));
+  if(activeTab==="equipment") content.appendChild(renderEquipment());
+}
+
+function renderAll(){
+  setHeader(); renderRoleSwitch(); renderTabs(); renderContent();
+}
+
+// CSV download (Interactive HTML download removed)
+function escapeCell(cell){
+  const s = String(cell);
+  if(s.includes(',') || s.includes('"') || s.includes('\n')) return '"' + s.replace(/"/g,'""') + '"';
+  return s;
+}
+function downloadCSV(){
+  const section = (title)=>[[''],[title],['']];
+  const rows = [
+    ['PATRICK BENSON — CAREER PROGRESSION & JOB DESCRIPTION (INTERACTIVE CSV)'],
+    ['Reports To',roleData.reportsTo],
+    ['Prepared For',roleData.preparedFor],
+    ['Territory',roleData.location],
+    ['Generated', new Date().toLocaleString()],
+
+    ['',''],
+    ['ROLES ORDER','Role 1A: BDM (NSW) | Role 1B: CoreStack (Foundation) | Role 2: Category (6-mo) | Role 3: International (12-mo)'],
+
+    ...section('ROLE 1A — BDM NSW'),
+    ['Department', bdmRole.department],
+    ['Compensation',''],
+    ['Base Salary', '$140,000'],
+    ['Car/Allowance (no super)', '$20,000'],
+    ['Super (12% on base only)', '$16,800'],
+    ['Total Package', '$176,800'],
+    ['Commission','13% of Gross Margin'],
+    ['KPIs','',''],
+    ['Metric','Target','Measurement'],
+    ...bdmRole.kpis.map(k => [k.metric,k.target,k.measure]),
+
+    ...section('ROLE 1B — CORESTACK (FOUNDATION)'),
+    ['Department', corestackRole.department],
+    ['Compensation','Value-based; company-tracked outcomes; Target ~ $100k when delivering value'],
+    ['Value Framework Categories',''],
+    ...corestackRole.valueFramework.categories.map(c => [c,'']),
+    ['KPIs','',''],
+    ['Metric','Target','Measurement'],
+    ...corestackRole.kpis.map(k => [k.metric,k.target,k.measure]),
+
+    ...section('ROLE 2 — CATEGORY MANAGER (6-MO REVIEW)'),
+    ['Department', categoryRole.department],
+    ['Additional Compensation','',''],
+    ['Base Increase','$40,000'],
+    ['Car Allowance Increase (no super)','$2,500'],
+    ['Super on Base (12%)','$4,800'],
+    ['Total Additional','$47,300'],
+    ['KPIs','',''],
+    ['Metric','Target','Measurement'],
+    ...categoryRole.kpis.map(k => [k.metric,k.target,k.measure]),
+
+    ...section('ROLE 3 — INTERNATIONAL CATEGORY MANAGER (12-MO REVIEW)'),
+    ['Department', internationalRole.department],
+    ['Additional Compensation','',''],
+    ['Base Increase','$20,000'],
+    ['Super on Base (12%)','$2,400'],
+    ['Car Allowance Increase','TBD'],
+    ['KPIs','',''],
+    ['Metric','Target','Measurement'],
+    ...internationalRole.kpis.map(k => [k.metric,k.target,k.measure]),
+
+    ...section('EQUIPMENT & EXPENSES'),
+    ['Item','Purpose','Cost','Status','Roles'],
+    ...equipment.map(eq => [eq.item, eq.purpose, eq.cost, eq.status, eq.roles])
+  ];
+  const csv = rows.map(r => r.map(escapeCell).join(',')).join('\n');
+  const blob = new Blob([csv],{type:'text/csv;charset=utf-8;'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'Patrick_Benson_JobDescription_v4.csv'; document.body.appendChild(a); a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+  a.remove();
+}
+document.getElementById('csvBtn').addEventListener('click', downloadCSV);
+
+function init(){ renderAll(); }
+init();
+</script>
+</body>
+</html>
